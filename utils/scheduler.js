@@ -307,7 +307,7 @@ let scheduler = {
                     try {
                         if (task.waitTime) {
                             console.info('延迟执行', task.taskName, task.waitTime, 'seconds')
-                            await new Promise((resolve, reject) => setTimeout(resolve, task.waitTime * 10))
+                            await new Promise((resolve, reject) => setTimeout(resolve, task.waitTime * 100))
                         }
 
                         let ttt = tasks[task.taskName]
